@@ -1,29 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Hero.astro";
-// import Navigation from "../components/Navigation.jsx";
-// import GamePhases from "../components/GamePhases.jsx";
-// import Prototype from "../components/Prototype.jsx";
-// import Team from "../components/Team.jsx";
-// import TechnicalSpecs from "../components/TechnicalSpecs.jsx";
-// import Footer from "../components/Footer.jsx";
+import Navigation from "../components/Navigation.tsx";
+import GamePhases from "../components/GamePhases.tsx";
+import Prototype from "../components/Prototype.jsx";
+import Team from "../components/Team.tsx";
+import TechnicalSpecs from "../components/TechnicalSpecs.jsx";
+import Footer from "../components/Footer.tsx";
 ---
 
-<Layout title="The Phantom Heist">
+<Layout title="The Phantom Heist | VR Heist Experience">
   <div class="min-h-screen bg-gradient-to-b from-phantom-darker via-phantom-dark to-phantom-darker">
     <!-- Accesibilidad -->
     <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
-    <!-- <Navigation client:load /> -->
+    <Navigation client:load />
 
     <main id="main-content">
       <Hero />
-      <!-- <GamePhases client:load />
+      <GamePhases client:load />
       <Prototype client:load />
       <Team client:load />
-      <TechnicalSpecs client:load /> -->
+      <TechnicalSpecs client:load />
     </main>
 
-    <!-- <Footer client:load /> -->
+    <Footer client:load />
   </div>
 </Layout>
