@@ -1,22 +1,29 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Hero.astro";
-import About from "../components/About.astro";
-import Features from "../components/Features.astro";
-import Team from "../components/Team.astro";
-import Contact from "../components/Contact.astro";
-import Footer from "../components/Footer.astro";
+// import Navigation from "../components/Navigation.jsx";
+// import GamePhases from "../components/GamePhases.jsx";
+// import Prototype from "../components/Prototype.jsx";
+// import Team from "../components/Team.jsx";
+// import TechnicalSpecs from "../components/TechnicalSpecs.jsx";
+// import Footer from "../components/Footer.jsx";
 ---
 
 <Layout title="The Phantom Heist">
-	<Header />
-	<main>
-		<Hero />
-		<About />
-		<Features />
-		<Team />
-		<Contact />
-	</main>
-	<Footer />
+  <div class="min-h-screen bg-gradient-to-b from-phantom-darker via-phantom-dark to-phantom-darker">
+    <!-- Accesibilidad -->
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+
+    <!-- <Navigation client:load /> -->
+
+    <main id="main-content">
+      <Hero />
+      <!-- <GamePhases client:load />
+      <Prototype client:load />
+      <Team client:load />
+      <TechnicalSpecs client:load /> -->
+    </main>
+
+    <!-- <Footer client:load /> -->
+  </div>
 </Layout>
