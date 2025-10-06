@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+/* 🧭 Definición de tema personalizada */
+@theme {
+  --color-phantom-dark: #0a0e1a;
+  --color-phantom-darker: #050810;
+  --color-phantom-accent: #00f0ff;
+  --color-phantom-accent-dim: #0088aa;
+  --color-phantom-danger: #ff3366;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "Courier New", monospace;
+}
+
 /* Reset y estilos base */
 @layer base {
   * {
