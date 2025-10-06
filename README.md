@@ -1,6 +1,6 @@
 # The Phantom Heist
 
-![The Phantom Heist Logo](public/favicon.svg)
+<!-- ![The Phantom Heist Logo](public/favicon.svg) -->
 
 > 🕵️ **Infiltra. Hackea. Escapa.** Una experiencia interactiva de heist cibernético.
 
