@@ -74,7 +74,7 @@
   /* Affordance: elementos clickeables */
   .card-interactive {
     @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl 
-           hover:shadow-phantom-accent/20 cursor-pointer;
+           hover:shadow-phantom-accent/20 cursor-pointer hover:z-10;
   }
 
   /* Animaciones */

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, shallowRef } from 'vue';
+import { ref, shallowRef, onMounted, onUnmounted } from 'vue';
 
 import HeroItem from './items/HeroItem.vue';
 import StatisticItem from './items/StatisticItem.vue';
@@ -62,6 +62,20 @@ const backdropClose = (event) => {
     closeModal();
   }
 };
+
+const handleKeydown = (event) => {
+  if (event.key === 'Escape' && activeModalComponent.value) {
+    closeModal();
+  }
+};
+
+onMounted(() => {
+  document.addEventListener('keydown', handleKeydown);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', handleKeydown);
+});
 </script>
 
 <template>
@@ -86,7 +100,7 @@ const backdropClose = (event) => {
     class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
     @click="backdropClose"
   >
-    <div class="bg-phantom-darker/80 backdrop-blur-sm border border-phantom-accent/30 rounded-xl p-8 max-w-2xl w-full relative animate-fadeInUp">
+    <div class="bg-phantom-darker/80 backdrop-blur-sm border border-phantom-accent/30 rounded-xl p-12 max-w-4xl w-full relative animate-fadeInUp">
       <button
         @click="closeModal"
         class="absolute top-4 right-4 text-white/50 hover:text-white transition-colors"
