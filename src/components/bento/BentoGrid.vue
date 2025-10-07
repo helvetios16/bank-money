@@ -3,15 +3,15 @@ import { ref, shallowRef, onMounted, onUnmounted } from 'vue';
 
 import HeroItem from './items/HeroItem.vue';
 import TeamItem from './items/TeamItem.vue';
-import QuickActionItem from './items/QuickActionItem.vue';
-import MetricItem from './items/MetricItem.vue';
-import SecondaryContentItem from './items/SecondaryContentItem.vue';
+import GamePhasesItem from './items/GamePhasesItem.vue';
+import PrototypeItem from './items/PrototypeItem.vue';
+import TechnicalSpecsItem from './items/TechnicalSpecsItem.vue';
 
 import HeroModal from './modals/HeroModal.vue';
 import TeamModal from './modals/TeamModal.vue';
-import QuickActionModal from './modals/QuickActionModal.vue';
-import MetricModal from './modals/MetricModal.vue';
-import SecondaryContentModal from './modals/SecondaryContentModal.vue';
+import GamePhasesModal from './modals/GamePhasesModal.vue';
+import PrototypeModal from './modals/PrototypeModal.vue';
+import TechnicalSpecsModal from './modals/TechnicalSpecsModal.vue';
 
 const bentoItems = shallowRef([
   {
@@ -29,20 +29,20 @@ const bentoItems = shallowRef([
   },
   {
     id: 3,
-    itemComponent: QuickActionItem,
-    modalComponent: QuickActionModal,
+    itemComponent: GamePhasesItem,
+    modalComponent: GamePhasesModal,
     className: "",
   },
   {
     id: 4,
-    itemComponent: MetricItem,
-    modalComponent: MetricModal,
+    itemComponent: TechnicalSpecsItem,
+    modalComponent: TechnicalSpecsModal,
     className: "md:col-span-1",
   },
   {
     id: 5,
-    itemComponent: SecondaryContentItem,
-    modalComponent: SecondaryContentModal,
+    itemComponent: PrototypeItem,
+    modalComponent: PrototypeModal,
     className: "md:col-span-2",
   },
 ]);

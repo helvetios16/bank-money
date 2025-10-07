@@ -1,0 +1,8 @@
+<template>
+  <div>
+    <h2 class="text-2xl font-bold text-phantom-accent mb-2">Prototipo Interactivo</h2>
+    <div class="text-white/80">
+      <p>Experimenta la fase de hackeo.</p>
+    </div>
+  </div>
+</template>
