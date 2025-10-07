@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BentoGrid from "../components/bento/BentoGrid.vue";
+---
+
+<Layout title="Bento Grid">
+  <!-- Contenedor del fondo -->
+  <div class="fixed inset-0 -z-10">
+    <!-- Fondo de gradiente -->
+    <div class="absolute inset-0 bg-gradient-to-b from-phantom-darker via-phantom-dark to-phantom-darker"></div>
+    <!-- Fondo de rejilla -->
+    <div
+      class="absolute inset-0 opacity-10"
+      style="background-image: linear-gradient(var(--color-phantom-accent) 1px, transparent 1px), linear-gradient(90deg, var(--color-phantom-accent) 1px, transparent 1px); background-size: 50px 50px;"
+    ></div>
+  </div>
+
+  <!-- Contenido principal -->
+  <main class="p-4 md:p-8 min-h-screen flex flex-col">
+    <div class="flex-grow flex">
+      <BentoGrid client:load />
+    </div>
+  </main>
+
+</Layout>
