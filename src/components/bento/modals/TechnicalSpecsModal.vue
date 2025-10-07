@@ -39,10 +39,10 @@ const icons = {
   <div class="max-w-7xl mx-auto">
     <!-- Header -->
     <div class="text-center mb-16 animate-fadeInUp">
-      <h2 id="specs-title" class="text-4xl md:text-5xl font-bold mb-4">
+      <h2 id="specs-title" class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-phantom-accent to-white bg-clip-text text-transparent">
         Especificaciones <span class="text-phantom-accent">Técnicas</span>
       </h2>
-      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
         Requisitos del sistema y plataformas soportadas
       </p>
     </div>
@@ -54,7 +54,8 @@ const icons = {
         <div
           v-for="(platform, index) in platforms"
           :key="index"
-          class="bg-phantom-dark/50 border border-phantom-accent/20 rounded-xl p-6 text-center hover:border-phantom-accent/50 transition-colors duration-300"
+          class="bg-phantom-dark/50 border border-phantom-accent/20 rounded-xl p-6 text-center hover:border-phantom-accent/50 hover:shadow-lg hover:shadow-phantom-accent/20 transition-all duration-300 group animate-fadeInUp"
+          :style="{ animationDelay: `${index * 0.1}s` }"
         >
           <div class="font-bold mb-2">{{ platform.name }}</div>
           <div :class="['inline-block px-3 py-1 rounded-full text-xs font-semibold', {
@@ -71,7 +72,7 @@ const icons = {
     <!-- System Requirements -->
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Minimum -->
-      <div class="bg-phantom-dark/50 backdrop-blur-sm border border-phantom-accent/20 rounded-2xl p-8">
+      <div class="bg-gradient-to-br from-phantom-dark/50 to-phantom-dark/60 backdrop-blur-sm border border-phantom-accent/20 rounded-2xl p-8 shadow-lg shadow-black/20">
         <h3 class="text-2xl font-bold mb-6 text-center">
           Requisitos <span class="text-yellow-500">Mínimos</span>
         </h3>
@@ -79,7 +80,8 @@ const icons = {
           <div
             v-for="(spec, index) in specs.minimum"
             :key="index"
-            class="flex items-center gap-4 p-4 bg-phantom-darker/50 rounded-lg"
+            class="flex items-center gap-4 p-4 bg-phantom-darker/50 rounded-lg hover:bg-phantom-darker/80 transition-colors duration-300 animate-fadeInUp"
+            :style="{ animationDelay: `${index * 0.05}s` }"
           >
             <div v-html="icons[spec.icon]" class="text-yellow-500 flex-shrink-0 w-6 h-6"></div>
             <div class="flex-1">
@@ -91,7 +93,7 @@ const icons = {
       </div>
 
       <!-- Recommended -->
-      <div class="bg-phantom-dark/50 backdrop-blur-sm border border-phantom-accent/20 rounded-2xl p-8">
+      <div class="bg-gradient-to-br from-phantom-dark/50 to-phantom-dark/60 backdrop-blur-sm border border-phantom-accent/20 rounded-2xl p-8 shadow-lg shadow-black/20">
         <h3 class="text-2xl font-bold mb-6 text-center">
           Requisitos <span class="text-green-500">Recomendados</span>
         </h3>
@@ -99,7 +101,8 @@ const icons = {
           <div
             v-for="(spec, index) in specs.recommended"
             :key="index"
-            class="flex items-center gap-4 p-4 bg-phantom-darker/50 rounded-lg"
+            class="flex items-center gap-4 p-4 bg-phantom-darker/50 rounded-lg hover:bg-phantom-darker/80 transition-colors duration-300 animate-fadeInUp"
+            :style="{ animationDelay: `${index * 0.05}s` }"
           >
             <div v-html="icons[spec.icon]" class="text-green-500 flex-shrink-0 w-6 h-6"></div>
             <div class="flex-1">
@@ -112,22 +115,22 @@ const icons = {
     </div>
 
     <!-- Additional Features -->
-    <div class="mt-12 bg-phantom-accent/5 border border-phantom-accent/30 rounded-2xl p-8">
+    <div class="mt-12 bg-gradient-to-br from-phantom-accent/5 to-phantom-accent/10 border border-phantom-accent/30 rounded-2xl p-8 shadow-lg shadow-phantom-accent/10">
       <h3 class="text-xl font-bold mb-4">Características Adicionales</h3>
-      <ul class="grid md:grid-cols-2 gap-4 text-gray-300">
-        <li class="flex items-center gap-2">
+      <ul class="grid sm:grid-cols-2 md:grid-cols-2 gap-4 text-gray-300">
+        <li class="flex items-center gap-2 animate-fadeInUp" style="animation-delay: 0.1s">
           <div v-html="icons.headphones" class="text-phantom-accent w-5 h-5"></div>
           <span>Audio espacial 3D requerido</span>
         </li>
-        <li class="flex items-center gap-2">
+        <li class="flex items-center gap-2 animate-fadeInUp" style="animation-delay: 0.15s">
           <div v-html="icons.wifi" class="text-phantom-accent w-5 h-5"></div>
           <span>Multijugador online obligatorio</span>
         </li>
-        <li class="flex items-center gap-2">
+        <li class="flex items-center gap-2 animate-fadeInUp" style="animation-delay: 0.2s">
           <div v-html="icons.monitor" class="text-phantom-accent w-5 h-5"></div>
           <span>Soporte para monitores secundarios</span>
         </li>
-        <li class="flex items-center gap-2">
+        <li class="flex items-center gap-2 animate-fadeInUp" style="animation-delay: 0.25s">
           <div v-html="icons['gamepad-2']" class="text-phantom-accent w-5 h-5"></div>
           <span>Compatible con mandos estándar</span>
         </li>
