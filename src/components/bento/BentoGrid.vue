@@ -1,13 +1,13 @@
 <script setup>
 import { ref, shallowRef } from 'vue';
 
-import MainFeatureItem from './items/HeroItem.vue';
+import HeroItem from './items/HeroItem.vue';
 import StatisticItem from './items/StatisticItem.vue';
 import QuickActionItem from './items/QuickActionItem.vue';
 import MetricItem from './items/MetricItem.vue';
 import SecondaryContentItem from './items/SecondaryContentItem.vue';
 
-import MainFeatureModal from './modals/HeroModal.vue';
+import HeroModal from './modals/HeroModal.vue';
 import StatisticModal from './modals/StatisticModal.vue';
 import QuickActionModal from './modals/QuickActionModal.vue';
 import MetricModal from './modals/MetricModal.vue';
@@ -16,9 +16,10 @@ import SecondaryContentModal from './modals/SecondaryContentModal.vue';
 const bentoItems = shallowRef([
   {
     id: 1,
-    itemComponent: MainFeatureItem,
-    modalComponent: MainFeatureModal,
+    itemComponent: HeroItem,
+    modalComponent: HeroModal,
     className: "md:col-span-2 md:row-span-2",
+    isHero: true,
   },
   {
     id: 2,
@@ -68,7 +69,12 @@ const backdropClose = (event) => {
     <div
       v-for="(item, index) in bentoItems"
       :key="item.id"
-      :class="[`bg-phantom-darker/80 backdrop-blur-sm rounded-lg p-6 flex flex-col justify-between card-interactive border border-phantom-accent/20 hover:border-phantom-accent/50`, item.className, index === 0 ? 'order-first' : '']"
+      :class="[
+        'rounded-lg flex flex-col justify-between card-interactive border border-phantom-accent/20 hover:border-phantom-accent/50',
+        item.isHero ? 'bg-phantom-darker p-0' : 'bg-phantom-darker/80 backdrop-blur-sm p-6',
+        item.className,
+        index === 0 ? 'order-first' : ''
+      ]"
       @click="openModal(item)"
     >
       <component :is="item.itemComponent" />
