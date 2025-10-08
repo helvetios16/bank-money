@@ -26,12 +26,9 @@ const teamIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
     </div>
 
     <div class="relative z-10 flex justify-center -space-x-3 mb-3">
-      <div
-        v-for="(member, index) in displayMembers"
-        :key="index"
+      <div v-for="(member, index) in displayMembers" :key="index"
         :class="`w-10 h-10 rounded-full bg-gradient-to-br ${member.color} flex items-center justify-center text-sm font-bold border-2 border-phantom-darker transition-all duration-300 hover:scale-110 hover:z-20 animate-fadeInUp group`"
-        :style="{ animationDelay: `${index * 0.1}s` }"
-      >
+        :style="{ animationDelay: `${index * 0.1}s` }">
         <div class="group-hover:animate-pulse">{{ member.avatar }}</div>
       </div>
     </div>
@@ -43,7 +40,10 @@ const teamIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                      hover:scale-105 focus:outline-none focus:ring-4 focus:ring-phantom-accent/50
                      active:scale-95 w-full group">
         <span class="group-hover:translate-x-1 transition-transform duration-200">Ver Equipo</span>
-        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none"
+          stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
       </button>
 
       <!-- Decorative element -->

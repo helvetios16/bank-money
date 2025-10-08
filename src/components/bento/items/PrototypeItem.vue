@@ -15,7 +15,8 @@ const codeLines = [
     <!-- Animated background -->
     <div class="absolute inset-0 bg-gradient-to-br from-phantom-accent/5 to-phantom-accent/10 rounded-lg"></div>
     <div class="absolute inset-0 opacity-5">
-      <div class="w-full h-full bg-gradient-to-r from-transparent via-phantom-accent/20 to-transparent animate-pulse"></div>
+      <div class="w-full h-full bg-gradient-to-r from-transparent via-phantom-accent/20 to-transparent animate-pulse">
+      </div>
     </div>
 
     <!-- Header -->
@@ -29,7 +30,8 @@ const codeLines = [
 
     <!-- Code terminal simulation -->
     <div class="relative z-10 flex-1 flex items-center justify-center">
-      <div class="w-full max-w-xs bg-phantom-darker/80 border border-phantom-accent/30 rounded-md p-3 font-mono text-xs">
+      <div
+        class="w-full max-w-xs bg-phantom-darker/80 border border-phantom-accent/30 rounded-md p-3 font-mono text-xs">
         <!-- Terminal header -->
         <div class="flex items-center gap-1 mb-2 pb-1 border-b border-phantom-accent/20">
           <div class="w-2 h-2 rounded-full bg-red-500"></div>
@@ -40,12 +42,9 @@ const codeLines = [
 
         <!-- Animated code lines -->
         <div class="space-y-0.5">
-          <div
-            v-for="(line, index) in codeLines.slice(0, 3)"
-            :key="index"
+          <div v-for="(line, index) in codeLines.slice(0, 3)" :key="index"
             class="text-green-400 animate-fadeInUp flex items-center gap-1"
-            :style="{ animationDelay: `${index * 0.6}s` }"
-          >
+            :style="{ animationDelay: `${index * 0.6}s` }">
             <span class="text-phantom-accent">$</span>
             <span class="typing-animation" :style="{ animationDelay: `${index * 0.6 + 0.2}s` }">{{ line }}</span>
           </div>
@@ -85,12 +84,24 @@ const codeLines = [
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: #00ff00; }
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #00ff00;
+  }
 }
 </style>

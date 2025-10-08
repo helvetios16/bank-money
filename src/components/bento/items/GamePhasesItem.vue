@@ -34,16 +34,15 @@ const phaseIcons = {
     <div class="relative z-10 flex-1 flex items-center justify-center">
       <div class="flex items-center gap-3 relative">
         <!-- Connecting line -->
-        <div class="absolute top-1/2 left-6 right-6 h-0.5 bg-gradient-to-r from-phantom-accent/20 via-phantom-accent/40 to-phantom-accent/20 transform -translate-y-1/2"></div>
+        <div
+          class="absolute top-1/2 left-6 right-6 h-0.5 bg-gradient-to-r from-phantom-accent/20 via-phantom-accent/40 to-phantom-accent/20 transform -translate-y-1/2">
+        </div>
 
         <!-- Phase icons -->
-        <div
-          v-for="(phase, index) in phases"
-          :key="index"
-          class="relative flex flex-col items-center gap-1 animate-fadeInUp"
-          :style="{ animationDelay: phase.delay }"
-        >
-          <div class="w-10 h-10 rounded-full bg-phantom-accent/10 border-2 border-phantom-accent/30 flex items-center justify-center transition-all duration-300 hover:bg-phantom-accent/20 hover:scale-110 hover:shadow-lg hover:shadow-phantom-accent/20">
+        <div v-for="(phase, index) in phases" :key="index"
+          class="relative flex flex-col items-center gap-1 animate-fadeInUp" :style="{ animationDelay: phase.delay }">
+          <div
+            class="w-10 h-10 rounded-full bg-phantom-accent/10 border-2 border-phantom-accent/30 flex items-center justify-center transition-all duration-300 hover:bg-phantom-accent/20 hover:scale-110 hover:shadow-lg hover:shadow-phantom-accent/20">
             <div v-html="phaseIcons[phase.icon]" class="text-phantom-accent w-5 h-5"></div>
           </div>
           <span class="text-xs text-white/60 font-medium">{{ phase.label }}</span>
