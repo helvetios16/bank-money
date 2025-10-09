@@ -79,7 +79,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 flex-grow w-full h-[98%]">
+  <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 flex-grow w-full h-[100%]">
     <div v-for="(item, index) in bentoItems" :key="item.id" :class="[
       'rounded-lg flex flex-col justify-between card-interactive border border-phantom-accent/20 hover:border-phantom-accent/50',
       item.isHero ? 'bg-phantom-darker p-0' : 'bg-phantom-darker/80 backdrop-blur-sm p-6',

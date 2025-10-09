@@ -89,23 +89,23 @@ const setActivePhase = (index) => {
 <template>
   <div class="max-w-7xl mx-auto">
     <!-- Header -->
-    <div class="text-center mb-16 animate-fadeInUp">
-      <h2 id="phases-title" class="text-4xl md:text-5xl font-bold mb-4">
+    <div class="text-center mb-12 animate-fadeInUp">
+      <h2 id="phases-title" class="text-3xl md:text-4xl font-bold mb-4">
         Cuatro Fases, Un <span class="text-phantom-accent">Objetivo</span>
       </h2>
-      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+      <p class="text-lg text-gray-400 max-w-3xl mx-auto">
         Cada fase requiere coordinación perfecta entre el hacker remoto y el infiltrado VR. 
         Un error puede activar la alarma prematuramente.
       </p>
     </div>
 
     <!-- Phase Selector -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
       <button
         v-for="(phase, index) in phases"
         :key="index"
         @click="setActivePhase(index)"
-        :class="['p-6 rounded-xl transition-all duration-300 text-left', {
+        :class="['p-4 rounded-xl transition-all duration-300 text-left', {
           ['bg-gradient-to-br text-white scale-105 shadow-2xl '+ phase.color]: activePhase === index,
           'bg-phantom-dark/50 border border-phantom-accent/20 hover:border-phantom-accent/50 hover:scale-102': activePhase !== index
         }]"
@@ -121,26 +121,26 @@ const setActivePhase = (index) => {
     </div>
 
     <!-- Phase Detail -->
-    <div class="bg-phantom-dark/50 backdrop-blur-sm border border-phantom-accent/20 rounded-2xl p-8 md:p-12 animate-fadeInUp">
-      <div class="grid md:grid-cols-2 gap-12">
+    <div class="bg-phantom-dark/50 backdrop-blur-sm border border-phantom-accent/20 rounded-2xl p-6 md:p-10 animate-fadeInUp">
+      <div class="grid md:grid-cols-2 gap-8">
         <!-- Left Column -->
         <div>
           <div class="flex items-start gap-4 mb-6">
-            <div :class="['p-4 rounded-xl bg-gradient-to-br', currentPhase.color]">
-              <div v-html="icons[currentPhase.icon]" class="w-10 h-10"></div>
+            <div :class="['p-3 rounded-xl bg-gradient-to-br', currentPhase.color]">
+              <div v-html="icons[currentPhase.icon]" class="w-8 h-8"></div>
             </div>
             <div>
               <div class="text-sm font-mono text-phantom-accent mb-1">FASE {{ currentPhase.number }}</div>
-              <h3 class="text-3xl font-bold mb-2">{{ currentPhase.title }}</h3>
+              <h3 class="text-2xl font-bold mb-2">{{ currentPhase.title }}</h3>
               <p class="text-gray-400">{{ currentPhase.subtitle }}</p>
             </div>
           </div>
 
-          <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+          <p class="text-base text-gray-300 mb-6 leading-relaxed">
             {{ currentPhase.description }}
           </p>
 
-          <div class="bg-phantom-darker/50 rounded-xl p-6 border border-phantom-accent/10">
+          <div class="bg-phantom-darker/50 rounded-xl p-4 border border-phantom-accent/10">
             <h4 class="text-sm font-mono text-phantom-accent mb-3">MECÁNICAS CLAVE</h4>
             <p class="text-gray-300">{{ currentPhase.mechanics }}</p>
           </div>
@@ -148,11 +148,11 @@ const setActivePhase = (index) => {
 
         <!-- Right Column - Features List -->
         <div>
-          <h4 class="text-xl font-bold mb-6 flex items-center gap-2">
+          <h4 class="text-lg font-bold mb-6 flex items-center gap-2">
             <div class="w-1 h-6 bg-gradient-to-b from-phantom-accent to-transparent"></div>
             Características
           </h4>
-          <ul class="space-y-4" role="list">
+          <ul class="space-y-3" role="list">
             <li
               v-for="(feature, index) in currentPhase.features"
               :key="index"
@@ -164,7 +164,7 @@ const setActivePhase = (index) => {
           </ul>
 
           <!-- Timeline indicator -->
-          <div class="mt-8 pt-8 border-t border-phantom-accent/20">
+          <div class="mt-6 pt-6 border-t border-phantom-accent/20">
             <div class="flex items-center justify-between text-sm">
               <span class="text-gray-400">Duración estimada</span>
               <span class="text-phantom-accent font-mono font-bold">
@@ -177,7 +177,7 @@ const setActivePhase = (index) => {
     </div>
 
     <!-- Navigation Hint -->
-    <div class="text-center mt-8 text-gray-500 text-sm">
+    <div class="text-center mt-6 text-gray-500 text-sm">
       Selecciona una fase arriba para ver detalles • {{ activePhase + 1 }} de 4
     </div>
   </div>
