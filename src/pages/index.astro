@@ -1,29 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from "../components/Hero.astro";
-import Navigation from "../components/Navigation.tsx";
-import GamePhases from "../components/GamePhases.tsx";
-import Prototype from "../components/Prototype.jsx";
-import Team from "../components/Team.tsx";
-import TechnicalSpecs from "../components/TechnicalSpecs.jsx";
-import Footer from "../components/Footer.tsx";
+import Layout from "../layouts/Layout.astro";
+import BentoGrid from "../components/bento/BentoGrid.vue";
 ---
 
 <Layout title="The Phantom Heist | VR Heist Experience">
-  <div class="min-h-screen bg-gradient-to-b from-phantom-darker via-phantom-dark to-phantom-darker">
-    <!-- Accesibilidad -->
-    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+  <!-- Contenedor del fondo -->
+  <div class="fixed inset-0 -z-10">
+    <!-- Fondo de gradiente -->
+    <div class="absolute inset-0 bg-gradient-to-b from-phantom-darker via-phantom-dark to-phantom-darker"></div>
+    <!-- Ruido sutil -->
+    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, var(--color-phantom-accent) 1px, transparent 1px); background-size: 20px 20px;"></div>
 
-    <Navigation client:load />
-
-    <main id="main-content">
-      <Hero />
-      <GamePhases client:load />
-      <Prototype client:load />
-      <Team client:load />
-      <TechnicalSpecs client:load />
-    </main>
-
-    <Footer client:load />
   </div>
+
+  <!-- Contenido principal -->
+  <main class="h-screen flex flex-col no-scroll">
+    <div class="flex-grow flex p-2 md:p-4">
+      <BentoGrid client:load />
+    </div>
+  </main>
+
 </Layout>
