@@ -20,11 +20,10 @@
     <!-- Contenido de texto -->
     <div class="relative z-10">
       <h2 class="text-4xl md:text-5xl font-bold mb-3 leading-tight">
-        THE <span class="text-phantom-accent">PHANTOM</span>
-        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-phantom-accent to-white">HEIST</span>
+        BANK <span class="text-phantom-accent">MONEY</span>
       </h2>
       <p class="text-sm text-gray-300 leading-relaxed max-w-xs mx-auto">
-        Una experiencia cooperativa de sigilo en Realidad Virtual.
+        Conviértete en un cajero de banco en esta experiencia de realidad virtual para un solo jugador.
       </p>
     </div>
   </div>

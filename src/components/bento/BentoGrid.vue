@@ -3,14 +3,13 @@ import { ref, shallowRef, onMounted, onUnmounted } from 'vue';
 
 import HeroItem from './items/HeroItem.vue';
 import TeamItem from './items/TeamItem.vue';
-import GamePhasesItem from './items/GamePhasesItem.vue';
+import GameplayLoopItem from './items/GameplayLoopItem.vue';
 import PrototypeItem from './items/PrototypeItem.vue';
 import TechnicalSpecsItem from './items/TechnicalSpecsItem.vue';
 
 import HeroModal from './modals/HeroModal.vue';
 import TeamModal from './modals/TeamModal.vue';
-import GamePhasesModal from './modals/GamePhasesModal.vue';
-import PrototypeModal from './modals/PrototypeModal.vue';
+import GameplayLoopModal from './modals/GameplayLoopModal.vue';
 import TechnicalSpecsModal from './modals/TechnicalSpecsModal.vue';
 
 const bentoItems = shallowRef([
@@ -29,8 +28,8 @@ const bentoItems = shallowRef([
   },
   {
     id: 3,
-    itemComponent: GamePhasesItem,
-    modalComponent: GamePhasesModal,
+    itemComponent: GameplayLoopItem,
+    modalComponent: GameplayLoopModal,
     className: "",
   },
   {
@@ -42,7 +41,7 @@ const bentoItems = shallowRef([
   {
     id: 5,
     itemComponent: PrototypeItem,
-    modalComponent: PrototypeModal,
+    modalComponent: null,
     className: "md:col-span-2",
   },
 ]);
@@ -85,7 +84,7 @@ onUnmounted(() => {
       item.isHero ? 'bg-phantom-darker p-0' : 'bg-phantom-darker/80 backdrop-blur-sm p-6',
       item.className,
       index === 0 ? 'order-first' : ''
-    ]" @click="openModal(item)">
+    ]" @click="item.modalComponent && openModal(item)">
       <component :is="item.itemComponent" />
     </div>
   </div>
