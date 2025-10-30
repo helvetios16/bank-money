@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import BentoGrid from "../components/bento/BentoGrid.vue";
 ---
 
-<Layout title="The Phantom Heist | VR Heist Experience">
+<Layout title="Bank Money | VR Experience">
   <!-- Contenedor del fondo -->
   <div class="fixed inset-0 -z-10">
     <!-- Fondo de gradiente -->
@@ -14,7 +14,7 @@ import BentoGrid from "../components/bento/BentoGrid.vue";
   </div>
 
   <!-- Contenido principal -->
-  <main class="h-screen flex flex-col no-scroll">
+  <main class="h-screen flex flex-col lg:overflow-hidden">
     <div class="flex-grow flex p-2 md:p-4">
       <BentoGrid client:load />
     </div>

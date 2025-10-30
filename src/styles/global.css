@@ -31,10 +31,6 @@
     scroll-behavior: smooth;
   }
 
-  .no-scroll {
-    overflow: hidden;
-  }
-
   /* Accesibilidad: foco visible */
   *:focus-visible {
     outline: 3px solid #00f0ff;
