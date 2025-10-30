@@ -42,12 +42,6 @@ const bentoItems = shallowRef([
   },
   {
     id: 5,
-    itemComponent: PrototypeItem,
-    modalComponent: null,
-    className: "md:col-span-2",
-  },
-  {
-    id: 6,
     itemComponent: NeedFindingItem,
     modalComponent: NeedFindingModal,
     className: "md:col-span-2",
