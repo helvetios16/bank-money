@@ -190,9 +190,9 @@ const teamMembers = [
             <span class="text-2xl">📄</span>
             <div>
               <p class="text-white font-semibold">Presentación completa</p>
-              <a href="../needfinding-research/Needfinding.pptx.pdf" target="_blank"
+              <a href="https://drive.google.com/file/d/184A_SPeaLXj0TaMjSn28JMG1og4uTYSk/view?usp=sharing" target="_blank"
                 class="text-purple-400 hover:text-purple-300 text-sm transition-colors">
-                Needfinding.pptx.pdf
+                Needfinding.pdf
               </a>
             </div>
           </div>
