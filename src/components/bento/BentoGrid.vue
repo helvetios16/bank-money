@@ -6,11 +6,13 @@ import TeamItem from './items/TeamItem.vue';
 import GameplayLoopItem from './items/GameplayLoopItem.vue';
 import PrototypeItem from './items/PrototypeItem.vue';
 import TechnicalSpecsItem from './items/TechnicalSpecsItem.vue';
+import NeedFindingItem from './items/NeedFindingItem.vue';
 
 import HeroModal from './modals/HeroModal.vue';
 import TeamModal from './modals/TeamModal.vue';
 import GameplayLoopModal from './modals/GameplayLoopModal.vue';
 import TechnicalSpecsModal from './modals/TechnicalSpecsModal.vue';
+import NeedFindingModal from './modals/NeedFindingModal.vue';
 
 const bentoItems = shallowRef([
   {
@@ -42,6 +44,12 @@ const bentoItems = shallowRef([
     id: 5,
     itemComponent: PrototypeItem,
     modalComponent: null,
+    className: "md:col-span-2",
+  },
+  {
+    id: 6,
+    itemComponent: NeedFindingItem,
+    modalComponent: NeedFindingModal,
     className: "md:col-span-2",
   },
 ]);

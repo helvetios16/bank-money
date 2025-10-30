@@ -110,3 +110,81 @@ Nuestro proyecto implementa los siguientes principios fundamentales de diseño d
 * **Simplicidad:** Máximo 3 niveles de información por sección
 * **Refuerzo visual:** Iconografía complementaria para conceptos clave
 * **Respiración visual:** Espaciado generoso entre secciones para reducir la fatiga
+
+## 📚 Proyecto de Needfinding: Algoritmos de Ordenamiento
+
+### Visión General
+
+Como parte de nuestro curso de Interacción Humano-Computador (CS374), realizamos un proyecto de investigación de necesidades (needfinding) centrado en mejorar la experiencia de aprendizaje de algoritmos de ordenamiento para estudiantes universitarios.
+
+### Objetivos del Proyecto
+
+**Usuario Objetivo:** Estudiantes universitarios de carreras de computación, ingeniería de software o afines, que cursan materias como Estructuras de Datos y Algoritmos.
+
+**Experiencia Investigada:** Cómo aprenden los estudiantes los algoritmos de ordenamiento y qué dificultades enfrentan en el proceso.
+
+### Metodología
+
+Realizamos **4 entrevistas en profundidad** con diferentes perfiles:
+
+- **Participante A:** Estudiante de 4to ciclo aprendiendo algoritmos de ordenamiento por primera vez
+- **Participante B:** Estudiante de 3er año que necesita reforzar comprensión de eficiencia y complejidad
+- **Participante C:** Estudiante de 4to-5to año preparándose para entrevistas técnicas
+- **Participante D:** Docente universitario con experiencia en enseñanza de Algoritmos
+
+### Necesidades Identificadas
+
+A través de nuestras entrevistas, identificamos **10 necesidades principales**:
+
+1. **Visualización gráfica:** Poder ver el comportamiento de los algoritmos de manera visual
+2. **Comprensión de recursión:** Visualizar el call stack para entender la recursión en algoritmos
+3. **Código + visualización:** Ver pseudocódigo/código junto a la representación gráfica
+4. **Navegación paso a paso:** Avanzar y retroceder entre pasos del algoritmo
+5. **Código editable:** Modificar el código y observar cambios visuales en tiempo real
+6. **Análisis de complejidad:** Identificar y comprender la complejidad del algoritmo
+7. **Soporte y explicaciones:** Resolver dudas mediante explicaciones textuales o LLM
+8. **Práctica activa:** Implementar algoritmos propios desde cero
+9. **Pensamiento crítico:** Analizar y proponer mejoras a implementaciones existentes
+10. **Consolidación:** Realizar pruebas prácticas para evaluar conocimientos adquiridos
+
+### Insights Principales
+
+#### 🎨 Visualización como Primer Recurso
+Los estudiantes prefieren representaciones gráficas y videos antes que texto o código puro.
+
+#### 🔄 Recursión: Punto de Confusión Crítica
+La recursión resulta confusa sin poder visualizar el call stack o el flujo de llamadas.
+
+#### 🎮 Necesidad de Interacción Paso a Paso
+Los usuarios necesitan controlar el ritmo de ejecución para comprender los cambios.
+
+#### 🧪 Código Editable para Experimentación
+Modificar código y ver resultados inmediatos refuerza el aprendizaje a través del error.
+
+#### 🔗 Conexión Código-Visual Simultánea
+Requieren ver código y visualización al mismo tiempo para comprender el flujo completo.
+
+#### ⚡ Complejidad como Reto Post-Básico
+La eficiencia y complejidad son esenciales para valorar realmente el algoritmo.
+
+#### 🤖 Apoyo de IA para Dudas Específicas
+Los LLMs son útiles para resolver preguntas puntuales y reforzar conceptos.
+
+#### 💪 Aprendizaje Activo mediante Práctica
+Usar ejemplos físicos, escribir código propio y experimentar refuerza la comprensión.
+
+### Materiales de Investigación
+
+📄 **Presentación completa:** [Needfinding.pptx.pdf](../needfinding-research/Needfinding.pptx.pdf)
+
+🎥 **Entrevistas grabadas:**
+- [Usuario A - Estudiante principiante](https://drive.google.com/file/d/1PbS-Kfx3yotUwupkS18m1GR8L-rpPipN/view?usp=sharing)
+- [Usuario B - Estudiante intermedio](https://drive.google.com/file/d/18VA8mWIXK9e8A2vkROYiqmsAjD9y0g_L/view?usp=sharing)
+- [Usuarios C y D - Avanzado y Docente](https://drive.google.com/drive/folders/1HeUkFPXMJ8dusMQJm6LxpGRT_mkMXC-T?usp=sharing)
+
+### Equipo de Investigación
+
+- **Lizarve Mamani Johan Fabricio**
+- **Machaca Muñiz Jose**
+- **Mendoza Fernandez Sebastian Andres**
+- **Ramos Pacco Wilson**
