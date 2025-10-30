@@ -1,12 +1,5 @@
 <script setup>
 const researchIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-check"><path d="m8 11 2 2 4-4"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`;
-
-const insights = [
-  { icon: '🎨', label: 'Visualización' },
-  { icon: '🔄', label: 'Recursión' },
-  { icon: '🎮', label: 'Interacción' },
-  { icon: '🧪', label: 'Experimentación' },
-];
 </script>
 
 <template>
@@ -20,18 +13,9 @@ const insights = [
     <div class="relative z-10">
       <div class="flex items-center gap-2 mb-2">
         <div v-html="researchIcon" class="text-purple-400 w-6 h-6"></div>
-        <h2 class="text-lg font-bold text-purple-400">Needfinding Research</h2>
+        <h2 class="text-lg font-bold text-purple-400">Needfinding</h2>
       </div>
-      <p class="text-white/80 text-xs mb-3">Investigación sobre algoritmos de ordenamiento</p>
-    </div>
-
-    <div class="relative z-10 grid grid-cols-2 gap-2 mb-3">
-      <div v-for="(insight, index) in insights" :key="index"
-        class="bg-phantom-darker/60 border border-purple-400/20 rounded-lg p-2 flex flex-col items-center justify-center transition-all duration-300 hover:border-purple-400/50 hover:scale-105 animate-fadeInUp"
-        :style="{ animationDelay: `${index * 0.1}s` }">
-        <span class="text-2xl mb-1">{{ insight.icon }}</span>
-        <span class="text-xs text-white/70">{{ insight.label }}</span>
-      </div>
+      <p class="text-white/80 text-xs">Algoritmos de ordenamiento</p>
     </div>
 
     <div class="relative z-10">
