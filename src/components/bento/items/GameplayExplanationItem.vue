@@ -1,5 +1,5 @@
 <script setup>
-const researchIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-check"><path d="m8 11 2 2 4-4"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`;
+const playIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>`;
 </script>
 
 <template>
@@ -12,10 +12,10 @@ const researchIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height=
 
     <div class="relative z-10">
       <div class="flex items-center gap-2 mb-2">
-        <div v-html="researchIcon" class="text-purple-400 w-6 h-6"></div>
-        <h2 class="text-lg font-bold text-purple-400">Needfinding</h2>
+        <div v-html="playIcon" class="text-purple-400 w-6 h-6"></div>
+        <h2 class="text-lg font-bold text-purple-400">Explicando el juego</h2>
       </div>
-      <p class="text-white/80 text-xs">Algoritmos de ordenamiento</p>
+      <p class="text-white/80 text-xs">Videos explicativos del gameplay</p>
     </div>
 
     <div class="relative z-10">
@@ -24,7 +24,7 @@ const researchIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height=
                      font-semibold transition-all duration-300 hover:bg-purple-500/20
                      hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-400/50
                      active:scale-95 w-full group">
-        <span class="group-hover:translate-x-1 transition-transform duration-200">Ver Investigación</span>
+        <span class="group-hover:translate-x-1 transition-transform duration-200">Ver Videos</span>
         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none"
           stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
